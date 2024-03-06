@@ -2,6 +2,28 @@
 
 Simple light DOM web component to build a table of contents page index with anchor links based on the headers on the page.
 
+Check out the [Demo Page](https://colinaut.github.io/page-index/)
+
+## Installation
+
+### CDN
+```
+<script type="module" src="https://unpkg.com/@colinaut/action-table/dist/page-index.js"></script>
+
+```
+Optional CSS
+```
+<link rel="stylesheet" href="https://unpkg.com/@colinaut/action-table/dist/action-table.css" />
+```
+
+### NPM
+
+```
+npm i @colinaut/page-index
+
+pnpm i @colinaut/page-index
+```
+
 ## Basic Usage
 
 ```
