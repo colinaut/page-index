@@ -27,10 +27,9 @@ export default class PageIndex extends HTMLElement {
 
 		// Build Page Index HTML
 		this.innerHTML = `
-        ${headerArea}
-        <ul>${Array.from(targets)
+        <nav aria-label="${this.getAttribute("aria") || "Page Index"}">${headerArea}<ul>${Array.from(targets)
 			.map((header) => `<li class="page-index-item-${header.tagName.toLowerCase()}"><a href="#${header.id}">${header.dataset.index || header.textContent}</a></li>`)
-			.join("")}</ul>`;
+			.join("")}</ul></nav>`;
 	}
 }
 customElements.define("page-index", PageIndex);

@@ -33,6 +33,7 @@ pnpm i @colinaut/page-index
 ### Attributes
 
 * `selector`: The selector used to select the table of contents items. Defaults to `main h2`
+* `aria`: The `aria-label` attribute on the nav element. Defaults to `Page Index"
 * `header`: (optional) add a header title to the page index. If you include the attribute without a string the text defaults to "Page Index"
 * `top`: (optional) add a link to the top of the body tag. If you include the attribute without a string the text defaults to "Top"
 
@@ -48,11 +49,13 @@ Here is an example of the HTML created by the component with the classes added. 
 
 ```
 <page-index selector="main :where(h2, h3)" header top>
-    <div class="page-index-header"><h2>Page Index</h2><a href="#page-index-body">Top</a></div>
-    <ul>
-        <li class="page-index-item-h2"><a href="#page-index-0">Header Level 2</a></li>
-        <li class="page-index-item-h2"><a href="#page-index-1">Another Header Level 2</a></li>
-        <li class="page-index-item-h3"><a href="#page-index-2">Header Level 3</a></li>
-    </ul>
+    <nav aria-label="Page Index">
+        <div class="page-index-header"><h2>Page Index</h2><a href="#page-index-body">Top</a></div>
+        <ul>
+            <li class="page-index-item-h2"><a href="#page-index-0">Header Level 2</a></li>
+            <li class="page-index-item-h2"><a href="#page-index-1">Another Header Level 2</a></li>
+            <li class="page-index-item-h3"><a href="#page-index-2">Header Level 3</a></li>
+        </ul>
+    </nav>
 </page-index>
 ```
